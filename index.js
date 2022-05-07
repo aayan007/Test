@@ -6,11 +6,13 @@ function displayDate() {
   var symbol = "0123456789ABCDEF";
   for (var i = 0; i < 6; i++) {
     color = color + symbol[Math.floor(Math.random() * 6) + 1];
+    // console.log(color);
   }
 
   var newDiv = document.createElement("div");
   newDiv.className = "ansbox";
-  newDiv.style.backgroundColor = color;
+  var colorCode = (newDiv.style.backgroundColor = color);
+  newDiv.innerHTML = colorCode;
   newDiv.addEventListener(
     "click",
     function () {
